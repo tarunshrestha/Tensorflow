@@ -21,11 +21,16 @@ X_test =  X_test.reshape(-1, 28*28).astype("float32") / 255.0
 model = keras.Sequential([
     layers.Dense(512, activation='relu'),
     layers.Dense(256, activation='relu'),
-    layers.Dense
+    layers.Dense(10)
 ])
 
 model.compile(
-    loss=keras.losses.SparseCategoricalCrossent
+    loss=keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+    optimizer=keras.optimizers.Adam(lr=0.001),
+    metrics=['accuracy'],
 )
 
+
+model.fit(X_train, y_train, batch_size=32, epochs=5, verbose=2)
+model.evaluate(X_train, y_train, batch_size=32, verbose=2)
 
