@@ -2,8 +2,8 @@ import os
 
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.layers import Dense,  Flatten
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense,  Flatten # type: ignore
+from tensorflow.keras.models import Sequential # type: ignore
 
 from core import myCallback
 
