@@ -39,5 +39,3 @@ model.fit(X_train, y_train, epochs=5, callbacks=[callbacks]) # perfect epochs is
 
 # Evaluate
 model.evaluate(X_test, y_test)
-
-print("Check")
