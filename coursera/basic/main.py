@@ -9,7 +9,7 @@ from core import myCallback
 
 os.system("clear")
 
-print(tf.__version__)
+# print(tf.__version__)
 
 mnist = tf.keras.datasets.fashion_mnist
 
